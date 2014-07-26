@@ -25,16 +25,11 @@
 	return self;
 }
 
-- (void)dealloc
-{
-	[_properties release];
-	[super dealloc];
-}
 
 - (void)addProperty: (NSString*)key value:(NSString*)value
 {
 	if (value && key)
-		_properties[key] = [[value copy] autorelease];
+		_properties[key] = [value copy];
 }
 
 - (void)addProperties:(NSDictionary*)properties

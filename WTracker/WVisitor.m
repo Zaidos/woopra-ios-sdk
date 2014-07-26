@@ -30,7 +30,7 @@
 
 + (WVisitor*)visitorWithCookie:(NSString*)cookie
 {
-	WVisitor* visitor = [[[WVisitor alloc] init] autorelease];
+	WVisitor* visitor = [[WVisitor alloc] init];
 	visitor.cookie = cookie;
 	
 	return visitor;
@@ -38,18 +38,13 @@
 
 + (WVisitor*)visitorWithEmail:(NSString*)address
 {
-	WVisitor* visitor = [[[WVisitor alloc] init] autorelease];
+	WVisitor* visitor = [[WVisitor alloc] init];
 	visitor.cookie = [self hashFromString:address];
 	[visitor addProperty:@"email" value:address];
 	
 	return visitor;
 }
 
-- (void)dealloc
-{
-	self.cookie = nil;
-	[super dealloc];
-}
 
 @end
 

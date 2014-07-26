@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSString* domain;
 
 // 
-@property (nonatomic, retain) WVisitor* visitor;
+@property (nonatomic, strong) WVisitor* visitor;
 
 // In seconds, defaults to 30, after which the event will expire and the visitor will considered offline.
 @property (nonatomic) NSTimeInterval idleTimeout;

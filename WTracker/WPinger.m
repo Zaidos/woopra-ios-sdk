@@ -24,7 +24,7 @@ static NSString* const WPingEndpoint = @"https://www.woopra.com/track/ping/";
 
 @implementation WPinger
 {
-	WTracker* _tracker;
+	WTracker* __weak _tracker;
 	NSTimer* _pingTimer;
 }
 
@@ -53,7 +53,6 @@ static NSString* const WPingEndpoint = @"https://www.woopra.com/track/ping/";
 	for (NSString* property in [self monitoredTrackerProperties])
 		[self.tracker removeObserver:self forKeyPath:property];
 	
-	[super dealloc];
 }
 
 - (NSArray*)monitoredTrackerProperties

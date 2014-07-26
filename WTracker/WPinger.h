@@ -11,7 +11,7 @@
 
 @interface WPinger : NSObject
 
-@property (nonatomic, readonly) WTracker* tracker;
+@property (weak, nonatomic, readonly) WTracker* tracker;
 
 - (id)initWithTracker: (WTracker*)tracker;
 

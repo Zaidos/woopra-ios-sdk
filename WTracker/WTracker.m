@@ -43,14 +43,6 @@ static WPinger* gPinger = nil;
 	return self;
 }
 
-- (void)dealloc
-{
-	self.domain = nil;
-	self.visitor = nil;
-	self.referer = nil;
-	
-	[super dealloc];
-}
 
 - (BOOL)trackEvent: (WEvent*)event
 {

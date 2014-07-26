@@ -12,7 +12,7 @@
 
 + (WEvent*)eventWithName:(NSString*)name
 {
-	return [[[WEvent alloc] initWithName:name] autorelease];
+	return [[WEvent alloc] initWithName:name];
 }
 
 - (id)initWithName: (NSString*)name
