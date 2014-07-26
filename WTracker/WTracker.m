@@ -75,12 +75,12 @@ static WPinger* gPinger = nil;
 	// Add visitors properties
 	NSDictionary* prop = self.visitor.properties;
 	for (NSString* k in prop)
-		[parameters appendFormat:@"&cv_%@=%@", k, [prop objectForKey:k]];
+		[parameters appendFormat:@"&cv_%@=%@", k, prop[k]];
 	
 	// Add Event Properties
 	prop = event.properties;
 	for (NSString* k in prop)
-		[parameters appendFormat:@"&ce_%@=%@", k, [prop objectForKey:k]];
+		[parameters appendFormat:@"&ce_%@=%@", k, prop[k]];
 	
 	// submit asynchronous track request
 	NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:

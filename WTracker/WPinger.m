@@ -58,7 +58,7 @@ static NSString* const WPingEndpoint = @"https://www.woopra.com/track/ping/";
 
 - (NSArray*)monitoredTrackerProperties
 {
-	return [NSArray arrayWithObjects:@"pingEnabled", @"timeout", @"visitor", @"host", nil];
+	return @[@"pingEnabled", @"timeout", @"visitor", @"host"];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context

@@ -34,7 +34,7 @@
 - (void)addProperty: (NSString*)key value:(NSString*)value
 {
 	if (value && key)
-		[_properties setObject: [[value copy] autorelease] forKey:key];
+		_properties[key] = [[value copy] autorelease];
 }
 
 - (void)addProperties:(NSDictionary*)properties
